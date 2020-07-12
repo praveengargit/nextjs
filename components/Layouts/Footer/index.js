@@ -1,4 +1,6 @@
-const Footer = () => {
+import { RichText } from 'prismic-reactjs';
+
+const Footer = ({ settings }) => {
 
   const scrollTop = () =>{
     window.scrollTo({top: 0, behavior: 'smooth'});
@@ -67,8 +69,8 @@ const Footer = () => {
         <div className="container">
           <div className="row">
             <div className="col-sm-8">
-              &copy; 2019 Your Site Name. All Rights Reserved. <a href="https://templatemag.com/bootstrap-templates/">Bootstrap templates</a> by TemplateMag.
-                    </div>
+              {RichText.render(settings.copyright)}
+            </div>
             <div className="col-sm-4">
               <ul className="pull-right">
                 <li>

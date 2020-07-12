@@ -1,12 +1,13 @@
 import Header from './Header';
 import Footer from './Footer';
 
-const Layout = ({ children }) => {
+const Layout = ({ settings, children }) => {
+  // console.log('settings', settings)
   return (
     <div>
       <Header />
       {children}
-      <Footer />
+      <Footer settings={settings} />
     </div>
   );
 }

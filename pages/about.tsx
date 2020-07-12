@@ -1,14 +1,13 @@
 import React from 'react';
 import Head from 'next/head'
 import { NextPageContext } from 'next'
-import Layout from "../components/Layouts";
 import { RichText } from 'prismic-reactjs';
 import { Client } from '../components/prismic';
 
 export default function About({ pageData }) {
   if (!pageData) { return <div> loading ....</div> }
   return (
-    <Layout>
+    <>
       <Head>
         <title>{RichText.asText(pageData.about_us)}</title>
       </Head>
@@ -143,7 +142,7 @@ export default function About({ pageData }) {
         </section>
       </div>
 
-    </Layout>
+    </>
   )
 }
 
